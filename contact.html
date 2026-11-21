@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<header>
+    <h1>LearnConnect</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Contact Us</h2>
+        <p>We are here to help you learn and grow.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Get In Touch</h2>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <br><br>
+
+        <input type="email" placeholder="Your Email" required>
+        <br><br>
+
+        <textarea placeholder="Write your message" required></textarea>
+        <br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="formMessage"></p>
+</section>
+
+<footer>
+    <p>© 2026 LearnConnect. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("formMessage").textContent =
+        "Thank you! Your message is ready, but a backend is needed to send it.";
+    this.reset();
+});
+</script>
+
+</body>
+</html>
+
